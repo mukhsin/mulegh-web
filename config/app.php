@@ -166,6 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
 
         //
 
@@ -225,6 +227,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Package Class Aliases...
+         */
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 
