@@ -14,5 +14,10 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/user', function (Request $request) {
-    return $request->user();
+    // return $request->user();
+    return 'hello';
 })->middleware('auth:api');
+
+Route::get('coba', function() {
+    return 'coba';
+});

@@ -5,17 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'Mulegh') }}</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        {{-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> --}}
+
+        <link href="/css/fonts.css" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Raleway-ExtraLight', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -72,14 +74,18 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        {{-- <a href="{{ url('/register') }}">Register</a> --}}
                     @endif
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                {{-- <div class="title m-b-md">
                     Laravel
+                </div> --}}
+
+                <div class="title m-b-md">
+                    {{ config('app.name') }}
                 </div>
 
                 <div class="links">

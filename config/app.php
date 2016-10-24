@@ -12,7 +12,8 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    // 'name' => 'Laravel',
+    'name' => 'Mulegh',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +169,8 @@ return [
          */
         Barryvdh\DomPDF\ServiceProvider::class,
         Orangehill\Iseed\IseedServiceProvider::class,
+        Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
         //
 
