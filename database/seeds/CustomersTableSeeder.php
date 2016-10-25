@@ -16085,12 +16085,12 @@ class CustomersTableSeeder extends Seeder
             array (
                 'id' => 1461,
                 'nomor' => 'MP01327',
-                'nama' => 'RIZAL"CUPHY"',
+                'nama' => 'RIZAL CUPHY',
                 'alamat' => 'KOBER PWT',
                 'telepon' => '-',
-                'author' => 'OLLA',
+                'author' => 'admin',
                 'created_at' => '2016-10-23 19:29:41',
-                'updated_at' => '2016-10-23 19:29:41',
+                'updated_at' => '2016-10-24 08:34:32',
             ),
             461 => 
             array (
@@ -22072,7 +22072,7 @@ class CustomersTableSeeder extends Seeder
             4 => 
             array (
                 'id' => 2005,
-                'nomor' => ',P02021',
+                'nomor' => 'MP02021',
                 'nama' => 'RIKI',
                 'alamat' => 'JL.PEMUDA GG 1 PWT',
                 'telepon' => '085869981814',
@@ -22841,14 +22841,14 @@ class CustomersTableSeeder extends Seeder
             ),
             74 => 
             array (
-                'id' => 2075,
+                'id' => 2077,
                 'nomor' => 'MP02091',
-                'nama' => 'Mukhsin',
-                'alamat' => 'Purwokerto',
+                'nama' => 'MUKHSIN WIBOWO',
+                'alamat' => 'PURWOKERTO',
                 'telepon' => '12345',
                 'author' => 'admin',
-                'created_at' => '2016-10-23 19:30:08',
-                'updated_at' => '2016-10-23 19:30:08',
+                'created_at' => '2016-10-24 02:01:09',
+                'updated_at' => '2016-10-24 02:01:24',
             ),
         ));
         

@@ -142,10 +142,20 @@ class BotolsTableSeeder extends Seeder
                 'id' => 13,
                 'tipe' => 'BMX',
                 'harga' => 10000.0,
-                'stock' => 220.0,
+                'stock' => 50.0,
                 'author' => 'admin',
                 'created_at' => '2016-10-23 19:16:27',
-                'updated_at' => '2016-10-23 19:16:27',
+                'updated_at' => '2016-10-24 02:56:35',
+            ),
+            13 => 
+            array (
+                'id' => 14,
+                'tipe' => 'BMW',
+                'harga' => 2000.0,
+                'stock' => 0.0,
+                'author' => 'admin',
+                'created_at' => '2016-10-24 01:54:14',
+                'updated_at' => '2016-10-24 01:58:52',
             ),
         ));
         

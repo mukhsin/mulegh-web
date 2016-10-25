@@ -1504,14 +1504,25 @@ class VariantsTableSeeder extends Seeder
             ),
             135 => 
             array (
-                'id' => 136,
+                'id' => 137,
+                'kode' => 'BMXX',
+                'nama' => 'Black Max X Extra',
+                'harga' => 2000.0,
+                'stock' => 100.0,
+                'author' => 'admin',
+                'created_at' => '2016-10-24 01:45:17',
+                'updated_at' => '2016-10-24 02:50:40',
+            ),
+            136 => 
+            array (
+                'id' => 138,
                 'kode' => 'BMX',
                 'nama' => 'Blue Mini Extra',
                 'harga' => 2000.0,
-                'stock' => 300.0,
+                'stock' => 50.0,
                 'author' => 'admin',
-                'created_at' => '2016-10-23 19:21:50',
-                'updated_at' => '2016-10-23 19:21:50',
+                'created_at' => '2016-10-24 01:48:26',
+                'updated_at' => '2016-10-24 02:39:29',
             ),
         ));
         
