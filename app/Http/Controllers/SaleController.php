@@ -6,10 +6,12 @@ use App\Botol;
 use App\Customer;
 use App\Http\Requests;
 use App\Sale;
+use App\Utils;
 use App\Variant;
 use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class SaleController extends Controller
 {
@@ -111,7 +113,49 @@ class SaleController extends Controller
                     ->orWhere('updated_at', 'like', $query)
                     ->orWhere('updated_at', 'like', $query.'%')
                     ->orWhere('updated_at', 'like', '%'.$query)
-                    ->paginate(10);
+                    ->get();
+
+        foreach (Sale::all() as $i => $sale) {
+            if (strpos(strtolower($sale->customer->nomor), strtolower($query)) !== false) {
+                if (!$sales->contains($sale)) {
+                    $sales->push($sale);
+                }
+            }
+
+            if (strpos(strtolower($sale->customer->nama), strtolower($query)) !== false) {
+                if (!$sales->contains($sale)) {
+                    $sales->push($sale);
+                }
+            }
+
+            if (strpos(strtolower($sale->variant->kode), strtolower($query)) !== false) {
+                if (!$sales->contains($sale)) {
+                    $sales->push($sale);
+                }
+            }
+
+            if (strpos(strtolower($sale->variant->nama), strtolower($query)) !== false) {
+                if (!$sales->contains($sale)) {
+                    $sales->push($sale);
+                }
+            }
+
+            if (strpos(strtolower($sale->botol->tipe), strtolower($query)) !== false) {
+                if (!$sales->contains($sale)) {
+                    $sales->push($sale);
+                }
+            }
+        }
+
+        $page = 1;
+        $perPage = 10;
+        $offset = ($page * $perPage) - $perPage;
+        $sales = new LengthAwarePaginator(
+            $sales->forPage($page, $perPage),
+            $sales->count(),
+            $perPage,
+            $page
+        );
 
         return view('sale.index', [
             'sales' => $sales,

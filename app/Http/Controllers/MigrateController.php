@@ -154,15 +154,17 @@ class MigrateController extends Controller
                 // echo 'botol';
             } else {
                 echo 'botolkosong'.$sale->botol_id.'-';
+                $sale->delete();
             }
 
             if (Variant::find($sale->variant_id)) {
                 // echo ' variant';
             } else {
                 echo 'variantkosong'.$sale->variant_id.'-';
+                // $sale->delete();
             }
 
-            echo $sale->id.'<br>';
+            // echo $sale->id.'<br>';
             // if ($sale->botol_id != '0') {
             //     $sale->decrement('botol_id', 45);
             //     // if (Botol::find($sale->botol_id)) {
